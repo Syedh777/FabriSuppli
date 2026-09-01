@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabriSuppli | Industrial Adhesives, Sealants & Specialty Tapes</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --card-border: #e2e8f0;
+            --text: #334155;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        .nav-cta {
+            background-color: var(--accent);
+            color: #ffffff !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .nav-cta:hover {
+            background-color: var(--accent-hover);
+        }
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), url('[attachment_0](attachment)') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 6rem 5% 5rem 5%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1.2rem;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.25;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .btn-main {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-main:hover {
+            background-color: var(--accent-hover);
+        }
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #94a3b8;
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-outline:hover {
+            border-color: #ffffff;
+            background: rgba(255,255,255,0.05);
+        }
+        .brands-bar {
+            background-color: var(--secondary);
+            color: #94a3b8;
+            padding: 1.2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .brands-bar span {
+            color: #ffffff;
+            margin: 0 12px;
+            font-size: 1rem;
+        }
+        .section {
+            padding: 5rem 5%;
+        }
+        .bg-light {
+            background-color: var(--light);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 3.5rem;
+            font-size: 1.05rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #f1f5f9;
+        }
+        .product-content {
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .product-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 0.4rem;
+        }
+        .product-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        .product-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+        .product-specs {
+            margin-top: auto;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+        .product-specs li {
+            list-style: none;
+            margin-bottom: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .product-specs strong {
+            color: var(--primary);
+        }
+        .specs-section {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        .specs-table th, .specs-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .specs-table th {
+            background-color: var(--light);
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .contact-box {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 5%;
+            font-size: 0.9rem;
+        }
+        @media(max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Fabri<span>Suppli</span></div>
+        <nav>
+            <a href="#adhesives">Structural Adhesives</a>
+            <a href="#sealants">Silicones & Sealants</a>
+            <a href="#tapes">Industrial Tapes</a>
+            <a href="#contact" class="nav-cta">Request Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Industrial Adhesives, Sealants & Technical Tapes Distributor</h1>
+        <p>Your primary source for high-performance bonding, temperature-resistant sealing, and specialized surface protection solutions across the Middle East.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn-main">Request Bulk Pricing</a>
+            <a href="#adhesives" class="btn-outline">Browse Products</a>
+        </div>
+    </section>
+
+    <div class="brands-bar">
+        DISTRIBUTING PREMIUM BRANDS: <span>HUNTSMAN ARALDITE®</span> | <span>DOWSIL™</span> | <span>NOVACEL®</span>
+    </div>
+
+    <!-- STRUCTURAL ADHESIVES SECTION -->
+    <section id="adhesives" class="section">
+        <h2 class="section-title">Araldite® Structural Epoxy Adhesives</h2>
+        <p class="section-subtitle">High-strength multi-purpose structural bonding solutions for industrial manufacturing and repair.</p>
+        
+        <div class="product-grid">
+            <!-- Araldite 2011 -->
+            <div class="product-card">
+                <img src="[attachment_0](attachment)" alt="Araldite 2011 Epoxy Adhesive" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Multi-Purpose Epoxy</div>
+                    <h3>Araldite® 2011</h3>
+                    <p>Versatile two-component epoxy paste with long open time. Excellent dynamic load resistance and suitable for bonding metals, ceramics, and rigid plastics.</p>
+                    <ul class="product-specs">
+                        <li><strong>Work Life:</strong> 100 min</li>
+                        <li><strong>Fixtures Time:</strong> 7 Hours</li>
+                        <li><strong>Color:</strong> Pale Yellow</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Araldite 2014 -->
+            <div class="product-card">
+                <img src="[attachment_1](attachment)" alt="Araldite 2014 Chemical Resistant Epoxy" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">High Chemical Resistance</div>
+                    <h3>Araldite® 2014-2</h3>
+                    <p>Thixotropic two-part paste resistant to high temperatures and water/chemical aggression. Ideal for vertical joints and metallic assembly.</p>
+                    <ul class="product-specs">
+                        <li><strong>Temp Resistance:</strong> Up to 140°C</li>
+                        <li><strong>Gap Filling:</strong> Up to 5mm</li>
+                        <li><strong>Color:</strong> Grey</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Araldite 2015 -->
+            <div class="product-card">
+                <img src="[attachment_2](attachment)" alt="Araldite 2015 Toughened Paste" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Toughened Paste</div>
+                    <h3>Araldite® 2015-1</h3>
+                    <p>Resilient two-component paste providing high impact and fatigue resistance. Specially designed for composite materials (GPR/SMC) and metals.</p>
+                    <ul class="product-specs">
+                        <li><strong>Shear Strength:</strong> High Impact</li>
+                        <li><strong>Substrates:</strong> Composites & Metals</li>
+                        <li><strong>Color:</strong> Neutral Paste</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SILICONES & SEALANTS SECTION -->
+    <section id="sealants" class="section bg-light">
+        <h2 class="section-title">Dowsil™ High-Performance Silicones</h2>
+        <p class="section-subtitle">Specialized silicone sealants engineered for extreme temperatures and general industrial maintenance.</p>
+        
+        <div class="product-grid">
+            <!-- Dowsil 732 -->
+            <div class="product-card">
+                <img src="[attachment_12](attachment)" alt="Dowsil 732 Multi-Purpose Silicone" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Multi-Purpose Sealant</div>
+                    <h3>Dowsil™ 732</h3>
+                    <p>Acetoxy RTV silicone rubber for general sealing, bonding, and protective coatings. Complies with FDA 21 CFR 177.2600 food contact standards.</p>
+                    <ul class="product-specs">
+                        <li><strong>Cure Type:</strong> Acetoxy RTV</li>
+                        <li><strong>Temp Range:</strong> -60°C to +180°C</li>
+                        <li><strong>Options:</strong> Clear, White, Black</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Dowsil 736 -->
+            <div class="product-card">
+                <img src="[attachment_13](attachment)" alt="Dowsil 736 Heat Resistant Silicone" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">High-Temperature Silicone</div>
+                    <h3>Dowsil™ 736</h3>
+                    <p>Non-slumping high-temperature sealant engineered for thermal industrial applications such as ductwork, oven belts, heaters, and flues.</p>
+                    <ul class="product-specs">
+                        <li><strong>Continuous Temp:</strong> Up to 260°C</li>
+                        <li><strong>Intermittent Temp:</strong> Up to 315°C</li>
+                        <li><strong>Color:</strong> Red</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL TAPES SECTION -->
+    <section id="tapes" class="section">
+        <h2 class="section-title">Industrial Tapes & Surface Protection</h2>
+        <p class="section-subtitle">Engineered adhesive tapes for masking, high-temperature sealing, structural mounting, and metal processing.</p>
+        
+        <div class="product-grid">
+            <!-- Novacel Laser Film -->
+            <div class="product-card">
+                <img src="[attachment_4](attachment)" alt="Novacel Laser Protective Film" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Surface Protection</div>
+                    <h3>Novacel® Laser Cutting Film</h3>
+                    <p>Premium protective film for fiber and CO2 laser cutting of stainless steel, aluminum, and sheet metal without burring or lifting.</p>
+                    <ul class="product-specs">
+                        <li><strong>Technology:</strong> CO2 & Fiber Laser</li>
+                        <li><strong>Application:</strong> Sheet Metal Processing</li>
+                        <li><strong>Feature:</strong> Clean Removal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Generic Masking Tapes -->
+            <div class="product-card">
+                <img src="[attachment_8](attachment)" alt="Industrial General Masking Tapes" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Industrial Masking</div>
+                    <h3>General & High-Temp Masking Tapes</h3>
+                    <p>Saturated crepe paper masking tapes engineered for industrial painting, woodworking, construction, and high-heat automotive applications.</p>
+                    <ul class="product-specs">
+                        <li><strong>Adhesive:</strong> Natural Rubber</li>
+                        <li><strong>Resistant:</strong> Solvent & Moisture</li>
+                        <li><strong>Temp Grades:</strong> 60°C, 80°C, 120°C</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Aluminum Foil Tapes -->
+            <div class="product-card">
+                <img src="[attachment_9](attachment)" alt="Aluminum Foil Tape Roll" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">HVAC & Thermal Sealing</div>
+                    <h3>Aluminum Foil Tapes</h3>
+                    <p>Dead-soft aluminum foil backing coated with acrylic adhesive. Ideal for joint sealing, vapor barrier insulation, and thermal reflection in HVAC systems.</p>
+                    <ul class="product-specs">
+                        <li><strong>Foil Thickness:</strong> 30μm / 40μm / 50μm</li>
+                        <li><strong>Rating:</strong> Flame Retardant</li>
+                        <li><strong>Adhesive:</strong> Acrylic / Solvent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Double Sided Polyester Tapes -->
+            <div class="product-card">
+                <img src="[attachment_10](attachment)" alt="Double Sided Polyester Film Tape" class="product-img">
+                <div class="product-content">
+                    <div class="product-tag">Mounting & Fabrication</div>
+                    <h3>Double-Sided Polyester Tapes</h3>
+                    <p>High-tack clear PET carrier tapes with modified acrylic adhesive. Exceptional resistance to shear, UV, plasticizers, and elevated temperatures.</p>
+                    <ul class="product-specs">
+                        <li><strong>Carrier:</strong> Clear Polyester Film</li>
+                        <li><strong>Adhesive:</strong> High Tack Acrylic</li>
+                        <li><strong>Application:</strong> Profile & Nameplate Mounting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TECHNICAL QUICK REFERENCE TABLE -->
+        <div class="specs-section">
+            <h3 style="color: var(--primary); font-size: 1.4rem;">Product Selection Quick Guide</h3>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Product Category</th>
+                        <th>Featured Reference</th>
+                        <th>Primary Industrial Application</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Structural Epoxies</td>
+                        <td>Araldite 2011 / 2014 / 2015</td>
+                        <td>Metal, composite, dynamic load, and chemical-resistant bonding</td>
+                    </tr>
+                    <tr>
+                        <td>RTV Silicones</td>
+                        <td>Dowsil 732 / 736</td>
+                        <td>Gasketing, electrical insulation, high-temp duct & furnace sealing</td>
+                    </tr>
+                    <tr>
+                        <td>Laser Protective Films</td>
+                        <td>Novacel Laser Series</td>
+                        <td>Fiber/CO2 laser cutting & surface protection of polished sheet metals</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Tapes</td>
+                        <td>Masking, Foil & D/S PET</td>
+                        <td>HVAC duct sealing, thermal barrier, high-heat painting & profile mounting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CONTACT & RFQ SECTION -->
+    <section id="contact" class="section bg-light">
+        <h2 class="section-title">Commercial & Wholesale Inquiries</h2>
+        <p class="section-subtitle">Reach out for bulk quotes, Technical Data Sheets (TDS), or technical compatibility queries.</p>
+        <div class="contact-box">
+            <div class="contact-info">
+                <p>Send your bill of quantities or product requirements directly to our trading team:</p>
+                <p style="margin-top: 1.5rem;"><strong>Official Contact Email:</strong></p>
+                <p style="margin-bottom: 1.5rem;">
+                    <a href="mailto:sales@fabrisuppli.com" class="email-link">sales@fabrisuppli.com</a>
+                </p>
+                <p><strong>Supply Network:</strong> UAE & GCC Regional Shipping</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FabriSuppli. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
