@@ -3,518 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FabriSuppli | Industrial Adhesives, Sealants & Specialty Tapes</title>
+    <title>FabriSuppli | Authorized Novacel® Surface Protection Films - GCC & UAE</title>
+    <meta name="description" content="Authorized distributor of Novacel surface protection films in the GCC. Specialized in Fiber & CO2 laser cutting films for Stainless Steel, BA, 2B, and Mirror finishes.">
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #1e293b;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --card-border: #e2e8f0;
-            --text: #334155;
+            --primary-blue: #004b87;
+            --novacel-green: #25d366;
+            --accent-navy: #002d54;
+            --light-bg: #f4f7f9;
+            --text-color: #333333;
+            --border-color: #e2e8f0;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            color: var(--text);
-            line-height: 1.6;
+            color: var(--text-color);
             background-color: #ffffff;
+            line-height: 1.6;
         }
+
+        /* Header Navigation */
         header {
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 1rem 5%;
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
+
         .logo {
-            font-size: 1.4rem;
+            font-size: 24px;
             font-weight: 800;
-            letter-spacing: 0.5px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
+
         .logo span {
-            color: var(--accent);
+            color: #0080ff;
         }
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-        .nav-cta {
-            background-color: var(--accent);
-            color: #ffffff !important;
-            padding: 0.5rem 1.2rem;
+
+        .badge-authorized {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 4px 12px;
             border-radius: 4px;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
-        .nav-cta:hover {
-            background-color: var(--accent-hover);
-        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), url('[attachment_0](attachment)') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 6rem 5% 5rem 5%;
+            background: linear-gradient(135deg, var(--accent-navy) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
         .hero h1 {
-            font-size: 2.6rem;
-            margin-bottom: 1.2rem;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.25;
-        }
-        .hero p {
-            font-size: 1.15rem;
-            color: #cbd5e1;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        .btn-main {
-            display: inline-block;
-            background-color: var(--accent);
-            color: #ffffff;
-            padding: 0.85rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background 0.2s;
-        }
-        .btn-main:hover {
-            background-color: var(--accent-hover);
-        }
-        .btn-outline {
-            display: inline-block;
-            border: 1px solid #94a3b8;
-            color: #ffffff;
-            padding: 0.85rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: border-color 0.2s, background 0.2s;
-        }
-        .btn-outline:hover {
-            border-color: #ffffff;
-            background: rgba(255,255,255,0.05);
-        }
-        .brands-bar {
-            background-color: var(--secondary);
-            color: #94a3b8;
-            padding: 1.2rem 5%;
-            text-align: center;
-            font-size: 0.9rem;
+            font-size: 36px;
             font-weight: 700;
-            letter-spacing: 1px;
+            margin-bottom: 15px;
+            line-height: 1.2;
         }
-        .brands-bar span {
-            color: #ffffff;
-            margin: 0 12px;
-            font-size: 1rem;
+
+        .hero p {
+            font-size: 18px;
+            color: #dbeafe;
+            margin-bottom: 30px;
         }
-        .section {
-            padding: 5rem 5%;
+
+        .hero-ctas {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .bg-light {
-            background-color: var(--light);
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
+
+        .btn-whatsapp {
+            background-color: var(--novacel-green);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
         .section-title {
             text-align: center;
-            font-size: 2.1rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 28px;
+            color: var(--accent-navy);
+            margin-bottom: 10px;
         }
+
         .section-subtitle {
             text-align: center;
-            color: var(--gray);
-            margin-bottom: 3.5rem;
-            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 40px;
         }
-        .product-grid {
+
+        /* Novacel Featured Product Grid */
+        .novacel-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 25px;
+            margin-bottom: 50px;
         }
+
         .product-card {
-            background: #ffffff;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
+            padding: 25px;
+            background: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .product-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background-color: #f1f5f9;
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
-        .product-content {
-            padding: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        .product-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 0.4rem;
-        }
+
         .product-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.3rem;
+            color: var(--primary-blue);
+            font-size: 20px;
+            margin-bottom: 10px;
         }
-        .product-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
+
+        .product-card .tag {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
-        .product-specs {
-            margin-top: auto;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--text);
-        }
-        .product-specs li {
+
+        .product-card ul {
             list-style: none;
-            margin-bottom: 0.3rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card ul li {
+            padding: 6px 0;
+            border-bottom: 1px id var(--light-bg);
+            font-size: 14px;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
         }
-        .product-specs strong {
-            color: var(--primary);
-        }
-        .specs-section {
-            background: #ffffff;
-            border: 1px solid var(--card-border);
+
+        /* Technical Specs Table */
+        .specs-wrapper {
+            background-color: var(--light-bg);
             border-radius: 8px;
-            padding: 2.5rem;
-            margin-top: 3rem;
+            padding: 30px;
+            margin-bottom: 60px;
         }
-        .specs-table {
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1.5rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 18px;
             text-align: left;
-            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
         }
-        .specs-table th, .specs-table td {
-            padding: 0.85rem 1rem;
-            border-bottom: 1px solid var(--card-border);
+
+        th {
+            background-color: var(--primary-blue);
+            color: white;
+            font-weight: 600;
         }
-        .specs-table th {
-            background-color: var(--light);
-            color: var(--primary);
-            font-weight: 700;
-        }
-        .contact-box {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 3rem;
+
+        /* Sample Order Banner */
+        .sample-banner {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 35px 25px;
             border-radius: 8px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             text-align: center;
+            margin-bottom: 60px;
         }
-        .contact-info p {
-            margin-bottom: 0.8rem;
-            color: var(--gray);
-            font-size: 1.05rem;
+
+        .sample-banner h2 {
+            margin-bottom: 10px;
+            font-size: 26px;
         }
-        .email-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
+
+        .sample-banner p {
+            margin-bottom: 20px;
+            font-size: 16px;
         }
-        .email-link:hover {
-            text-decoration: underline;
+
+        /* Secondary Products (Dowsil & Araldite) */
+        .secondary-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
         }
+
+        .secondary-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        .secondary-card h4 {
+            color: var(--accent-navy);
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
         footer {
-            background-color: var(--primary);
+            background-color: var(--accent-navy);
             color: #94a3b8;
+            padding: 40px 20px;
             text-align: center;
-            padding: 2rem 5%;
-            font-size: 0.9rem;
+            font-size: 14px;
         }
-        @media(max-width: 768px) {
-            header { flex-direction: column; gap: 1rem; }
-            nav a { margin: 0 0.5rem; }
-            .hero h1 { font-size: 2rem; }
-            .hero-buttons { flex-direction: column; }
+
+        footer strong {
+            color: white;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--novacel-green);
+            color: white;
+            padding: 12px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1eb954;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Fabri<span>Suppli</span></div>
-        <nav>
-            <a href="#adhesives">Structural Adhesives</a>
-            <a href="#sealants">Silicones & Sealants</a>
-            <a href="#tapes">Industrial Tapes</a>
-            <a href="#contact" class="nav-cta">Request Quote</a>
-        </nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Fabri<span>Suppli</span></a>
+            <span class="badge-authorized">Authorized Novacel® Distributor</span>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Industrial Adhesives, Sealants & Technical Tapes Distributor</h1>
-        <p>Your primary source for high-performance bonding, temperature-resistant sealing, and specialized surface protection solutions across the Middle East.</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn-main">Request Bulk Pricing</a>
-            <a href="#adhesives" class="btn-outline">Browse Products</a>
+        <div class="hero-container">
+            <h1>Novacel® Advanced Surface Protection Solutions</h1>
+            <p>Engineered for Fiber Laser Cutting, CO2 Lasers, Deep Drawing, and High-Finish Stainless Steel Processing across UAE & GCC Industrial Hubs.</p>
+            <div class="hero-ctas">
+                <a href="https://wa.me/918892346446?text=Hello%20FabriSuppli%2C%20I%20would%20like%20to%20request%20a%20Novacel%20laser%20film%20sample%20roll." target="_blank" class="btn btn-whatsapp">💬 Request Free Sample Roll</a>
+                <a href="#novacel-range" class="btn btn-outline">Explore Novacel® Range</a>
+            </div>
         </div>
     </section>
 
-    <div class="brands-bar">
-        DISTRIBUTING PREMIUM BRANDS: <span>HUNTSMAN ARALDITE®</span> | <span>DOWSIL™</span> | <span>NOVACEL®</span>
+    <div class="container" id="novacel-range">
+        <h2 class="section-title">Novacel® Industrial Film Portfolio</h2>
+        <p class="section-subtitle">Zero-residue, high-adhesion protective films designed for sheet metal fabricators and coil processors.</p>
+
+        <div class="novacel-grid">
+            <div class="product-card">
+                <span class="tag">Fiber Laser Cutting</span>
+                <h3>Novacel® Laser Cutting Series</h3>
+                <p>Designed specifically for high-speed fiber and CO2 laser machines operating on stainless steel and aluminum sheets.</p>
+                <ul>
+                    <li>✓ Prevents bubble formation & edge lifting</li>
+                    <li>✓ Clean single-pass laser cutting without burrs</li>
+                    <li>✓ BA, 2B, No. 4, and Mirror Finish SS compatible</li>
+                </ul>
+                <a href="https://wa.me/918892346446?text=Inquiry%20regarding%20Novacel%20Laser%20Cutting%20Series" class="btn btn-whatsapp" style="width: 100%; text-align: center;">Get Quote / Datasheet</a>
+            </div>
+
+            <div class="product-card">
+                <span class="tag">Deep Drawing & Stamping</span>
+                <h3>Novacel® Deep Drawing Films</h3>
+                <p>High-elongation protective films formulated to withstand extreme mechanical stress during press working and forming.</p>
+                <ul>
+                    <li>✓ Self-lubricating surface coatings</li>
+                    <li>✓ Eliminates oil/grease wash requirements</li>
+                    <li>✓ High resistance to tearing during die pressing</li>
+                </ul>
+                <a href="https://wa.me/918892346446?text=Inquiry%20regarding%20Novacel%20Deep%20Drawing%20Films" class="btn btn-whatsapp" style="width: 100%; text-align: center;">Get Quote / Datasheet</a>
+            </div>
+
+            <div class="product-card">
+                <span class="tag">Architecture & Coil Coating</span>
+                <h3>Novacel® Architectural & Panel Films</h3>
+                <p>Outdoor UV-resistant protective films for aluminum composite panels (ACP), sandwich panels, and architectural profiles.</p>
+                <ul>
+                    <li>✓ Up to 6 months outdoor UV resistance</li>
+                    <li>✓ Easy-peel technology with zero adhesive transfer</li>
+                    <li>✓ Protects against scratches during transport & installation</li>
+                </ul>
+                <a href="https://wa.me/918892346446?text=Inquiry%20regarding%20Novacel%20Architectural%20Films" class="btn btn-whatsapp" style="width: 100%; text-align: center;">Get Quote / Datasheet</a>
+            </div>
+        </div>
+
+        <div class="specs-wrapper">
+            <h2 class="section-title">Technical Specifications & Application Matrix</h2>
+            <p class="section-subtitle">Select the right film grade for your industrial laser bed or workshop process.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Film Application</th>
+                            <th>Substrates / Finishes</th>
+                            <th>Laser Type</th>
+                            <th>UV Outdoor Resistance</th>
+                            <th>Key Feature</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Novacel Fiber Laser Series</strong></td>
+                            <td>Stainless Steel 304/316 (BA, 2B, Mirror)</td>
+                            <td>Fiber & CO2 Laser</td>
+                            <td>3 Months</td>
+                            <td>Zero edge-lifting during laser pass</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Novacel Deep Drawing</strong></td>
+                            <td>SS Sheets, Aluminum Alloys</td>
+                            <td>N/A (Press Forming)</td>
+                            <td>Indoor Storage</td>
+                            <td>High elasticity & self-lubricating</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Novacel ACP / Panel Film</strong></td>
+                            <td>Coated Aluminum, Structural Panels</td>
+                            <td>N/A (Building / Transport)</td>
+                            <td>6 Months UV</td>
+                            <td>Easy peel without adhesive residue</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sample-banner">
+            <h2>Test Novacel® Quality on Your Laser Machine</h2>
+            <p>We supply complimentary sample rolls to laser workshops, fabricators, and coil processors in Dubai, Abu Dhabi, Sharjah, Riyadh, and across the GCC.</p>
+            <a href="https://wa.me/918892346446?text=Hello%20FabriSuppli%2C%20we%20want%20to%20request%20a%20free%20Novacel%20sample%20roll%20for%20our%20workshop." target="_blank" class="btn btn-outline">👉 Request Free Sample Roll via WhatsApp</a>
+        </div>
+
+        <h2 class="section-title">Complementary Industrial Products</h2>
+        <p class="section-subtitle">In stock and distributed alongside our Novacel surface protection range.</p>
+
+        <div class="secondary-products">
+            <div class="secondary-card">
+                <h4>DOWSIL™ Silicone Sealants</h4>
+                <p>Industrial grade RTV silicone sealants including Dowsil 732 (Multi-Purpose) and Dowsil 736 (High Temperature).</p>
+            </div>
+            <div class="secondary-card">
+                <h4>Araldite® Structural Adhesives</h4>
+                <p>High-strength 2-component epoxy adhesives including Araldite 2011, 2014-2, and 2015-1 for metal bonding.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- STRUCTURAL ADHESIVES SECTION -->
-    <section id="adhesives" class="section">
-        <h2 class="section-title">Araldite® Structural Epoxy Adhesives</h2>
-        <p class="section-subtitle">High-strength multi-purpose structural bonding solutions for industrial manufacturing and repair.</p>
-        
-        <div class="product-grid">
-            <!-- Araldite 2011 -->
-            <div class="product-card">
-                <img src="araldite2011.jpg" alt="Araldite 2011 Epoxy Adhesive" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Multi-Purpose Epoxy</div>
-                    <h3>Araldite® 2011</h3>
-                    <p>Versatile two-component epoxy paste with long open time. Excellent dynamic load resistance and suitable for bonding metals, ceramics, and rigid plastics.</p>
-                    <ul class="product-specs">
-                        <li><strong>Work Life:</strong> 100 min</li>
-                        <li><strong>Fixtures Time:</strong> 7 Hours</li>
-                        <li><strong>Color:</strong> Pale Yellow</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Araldite 2014 -->
-            <div class="product-card">
-                <img src="araldite2014.jpg" alt="Araldite 2014 Chemical Resistant Epoxy" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">High Chemical Resistance</div>
-                    <h3>Araldite® 2014-2</h3>
-                    <p>Thixotropic two-part paste resistant to high temperatures and water/chemical aggression. Ideal for vertical joints and metallic assembly.</p>
-                    <ul class="product-specs">
-                        <li><strong>Temp Resistance:</strong> Up to 140°C</li>
-                        <li><strong>Gap Filling:</strong> Up to 5mm</li>
-                        <li><strong>Color:</strong> Grey</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Araldite 2015 -->
-            <div class="product-card">
-                <img src="araldite2015.jpg" alt="Araldite 2015 Toughened Paste" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Toughened Paste</div>
-                    <h3>Araldite® 2015-1</h3>
-                    <p>Resilient two-component paste providing high impact and fatigue resistance. Specially designed for composite materials (GPR/SMC) and metals.</p>
-                    <ul class="product-specs">
-                        <li><strong>Shear Strength:</strong> High Impact</li>
-                        <li><strong>Substrates:</strong> Composites & Metals</li>
-                        <li><strong>Color:</strong> Neutral Paste</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SILICONES & SEALANTS SECTION -->
-    <section id="sealants" class="section bg-light">
-        <h2 class="section-title">Dowsil™ High-Performance Silicones</h2>
-        <p class="section-subtitle">Specialized silicone sealants engineered for extreme temperatures and general industrial maintenance.</p>
-        
-        <div class="product-grid">
-            <!-- Dowsil 732 -->
-            <div class="product-card">
-                <img src="dowsil732.jpg" alt="Dowsil 732 Multi-Purpose Silicone" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Multi-Purpose Sealant</div>
-                    <h3>Dowsil™ 732</h3>
-                    <p>Acetoxy RTV silicone rubber for general sealing, bonding, and protective coatings. Complies with FDA 21 CFR 177.2600 food contact standards.</p>
-                    <ul class="product-specs">
-                        <li><strong>Cure Type:</strong> Acetoxy RTV</li>
-                        <li><strong>Temp Range:</strong> -60°C to +180°C</li>
-                        <li><strong>Options:</strong> Clear, White, Black</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Dowsil 736 -->
-            <div class="product-card">
-                <img src="dowsil736.jpg" alt="Dowsil 736 Heat Resistant Silicone" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">High-Temperature Silicone</div>
-                    <h3>Dowsil™ 736</h3>
-                    <p>Non-slumping high-temperature sealant engineered for thermal industrial applications such as ductwork, oven belts, heaters, and flues.</p>
-                    <ul class="product-specs">
-                        <li><strong>Continuous Temp:</strong> Up to 260°C</li>
-                        <li><strong>Intermittent Temp:</strong> Up to 315°C</li>
-                        <li><strong>Color:</strong> Red</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECHNICAL TAPES SECTION -->
-    <section id="tapes" class="section">
-        <h2 class="section-title">Industrial Tapes & Surface Protection</h2>
-        <p class="section-subtitle">Engineered adhesive tapes for masking, high-temperature sealing, structural mounting, and metal processing.</p>
-        
-        <div class="product-grid">
-            <!-- Novacel Laser Film -->
-            <div class="product-card">
-                <img src="[attachment_4](attachment)" alt="Novacel Laser Protective Film" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Surface Protection</div>
-                    <h3>Novacel® Laser Cutting Film</h3>
-                    <p>Premium protective film for fiber and CO2 laser cutting of stainless steel, aluminum, and sheet metal without burring or lifting.</p>
-                    <ul class="product-specs">
-                        <li><strong>Technology:</strong> CO2 & Fiber Laser</li>
-                        <li><strong>Application:</strong> Sheet Metal Processing</li>
-                        <li><strong>Feature:</strong> Clean Removal</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Generic Masking Tapes -->
-            <div class="product-card">
-                <img src="[attachment_8](attachment)" alt="Industrial General Masking Tapes" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Industrial Masking</div>
-                    <h3>General & High-Temp Masking Tapes</h3>
-                    <p>Saturated crepe paper masking tapes engineered for industrial painting, woodworking, construction, and high-heat automotive applications.</p>
-                    <ul class="product-specs">
-                        <li><strong>Adhesive:</strong> Natural Rubber</li>
-                        <li><strong>Resistant:</strong> Solvent & Moisture</li>
-                        <li><strong>Temp Grades:</strong> 60°C, 80°C, 120°C</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Aluminum Foil Tapes -->
-            <div class="product-card">
-                <img src="[attachment_9](attachment)" alt="Aluminum Foil Tape Roll" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">HVAC & Thermal Sealing</div>
-                    <h3>Aluminum Foil Tapes</h3>
-                    <p>Dead-soft aluminum foil backing coated with acrylic adhesive. Ideal for joint sealing, vapor barrier insulation, and thermal reflection in HVAC systems.</p>
-                    <ul class="product-specs">
-                        <li><strong>Foil Thickness:</strong> 30μm / 40μm / 50μm</li>
-                        <li><strong>Rating:</strong> Flame Retardant</li>
-                        <li><strong>Adhesive:</strong> Acrylic / Solvent</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Double Sided Polyester Tapes -->
-            <div class="product-card">
-                <img src="[attachment_10](attachment)" alt="Double Sided Polyester Film Tape" class="product-img">
-                <div class="product-content">
-                    <div class="product-tag">Mounting & Fabrication</div>
-                    <h3>Double-Sided Polyester Tapes</h3>
-                    <p>High-tack clear PET carrier tapes with modified acrylic adhesive. Exceptional resistance to shear, UV, plasticizers, and elevated temperatures.</p>
-                    <ul class="product-specs">
-                        <li><strong>Carrier:</strong> Clear Polyester Film</li>
-                        <li><strong>Adhesive:</strong> High Tack Acrylic</li>
-                        <li><strong>Application:</strong> Profile & Nameplate Mounting</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- TECHNICAL QUICK REFERENCE TABLE -->
-        <div class="specs-section">
-            <h3 style="color: var(--primary); font-size: 1.4rem;">Product Selection Quick Guide</h3>
-            <table class="specs-table">
-                <thead>
-                    <tr>
-                        <th>Product Category</th>
-                        <th>Featured Reference</th>
-                        <th>Primary Industrial Application</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Structural Epoxies</td>
-                        <td>Araldite 2011 / 2014 / 2015</td>
-                        <td>Metal, composite, dynamic load, and chemical-resistant bonding</td>
-                    </tr>
-                    <tr>
-                        <td>RTV Silicones</td>
-                        <td>Dowsil 732 / 736</td>
-                        <td>Gasketing, electrical insulation, high-temp duct & furnace sealing</td>
-                    </tr>
-                    <tr>
-                        <td>Laser Protective Films</td>
-                        <td>Novacel Laser Series</td>
-                        <td>Fiber/CO2 laser cutting & surface protection of polished sheet metals</td>
-                    </tr>
-                    <tr>
-                        <td>Technical Tapes</td>
-                        <td>Masking, Foil & D/S PET</td>
-                        <td>HVAC duct sealing, thermal barrier, high-heat painting & profile mounting</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- CONTACT & RFQ SECTION -->
-    <section id="contact" class="section bg-light">
-        <h2 class="section-title">Commercial & Wholesale Inquiries</h2>
-        <p class="section-subtitle">Reach out for bulk quotes, Technical Data Sheets (TDS), or technical compatibility queries.</p>
-        <div class="contact-box">
-            <div class="contact-info">
-                <p>Send your bill of quantities or product requirements directly to our trading team:</p>
-                <p style="margin-top: 1.5rem;"><strong>Official Contact Email:</strong></p>
-                <p style="margin-bottom: 1.5rem;">
-                    <a href="mailto:sales@fabrisuppli.com" class="email-link">sales@fabrisuppli.com</a>
-                </p>
-                <p><strong>Supply Network:</strong> UAE & GCC Regional Shipping</p>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2026 FabriSuppli. All rights reserved.</p>
+        <p><strong>FabriSuppli</strong> — Authorized Distributor of Novacel® Surface Protection Solutions</p>
+        <p style="margin-top: 8px;">Commercial & Wholesale Inquiries | Serving UAE, Saudi Arabia, Oman, Qatar, Kuwait & Bahrain</p>
+        <p style="margin-top: 15px; font-size: 12px; color: #64748b;">&copy; 2026 FabriSuppli. All rights reserved.</p>
     </footer>
-    <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918892446446?text=Hello%20FabriSuppli%2C%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; gap: 8px;">💬 Chat on WhatsApp</a>
+
+    <a href="https://wa.me/918892446446?text=Hello%20FabriSuppli%2C%20I%20have%20an%20inquiry%20regarding%20Novacel%20films." 
+       class="whatsapp-float" 
+       target="_blank">
+       💬 Chat on WhatsApp
+    </a>
+
 </body>
 </html>
